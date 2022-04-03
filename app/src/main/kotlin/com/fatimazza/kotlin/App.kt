@@ -43,6 +43,19 @@ fun main() {
 
     // Expression
     println(if (true) "Always true" else "False")
+
+    println("")
+
     // Function
     println(App().greeting)
+
+    val user = setUser("Fatima", 17)
+    println (user)
+    printUser("Fatima")
+}
+
+fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
+
+fun printUser(name: String) {
+    println("Your name $name")
 }
