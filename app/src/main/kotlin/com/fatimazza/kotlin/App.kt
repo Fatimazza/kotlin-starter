@@ -41,8 +41,27 @@ fun main() {
 
     println("")
 
-    // Expression
+    // IF Expression
     println(if (true) "Always true" else "False")
+
+    val now = 16
+    val openHours = 7
+    val office: String
+    if (now > openHours) {
+        office = "Office already open"
+    } else {
+        office = "Office is closed"
+    }
+    print(office)
+
+    val officeOpen = if (now > openHours) {
+        "Office already open"
+    } else if (now == openHours) {
+        "Wait, office will be open"
+    } else {
+        "Office is closed"
+    }
+    println(officeOpen)
 
     println("")
 
