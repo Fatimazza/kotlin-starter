@@ -11,5 +11,9 @@ class App {
 }
 
 fun main() {
+    val name = "Codewithza"
+    println(name)
+    println(if (true) "Always true" else "False")
+
     println(App().greeting)
 }
