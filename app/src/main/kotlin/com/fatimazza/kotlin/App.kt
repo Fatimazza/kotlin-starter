@@ -46,6 +46,7 @@ fun main() {
 
     val now = 16
     val openHours = 7
+    val closeHours = 17
     val office: String
     if (now > openHours) {
         office = "Office already open"
@@ -71,6 +72,16 @@ fun main() {
     val user = setUser("Fatima", 17)
     println (user)
     printUser("Fatima")
+
+    println("")
+
+    // Boolean
+    val isOpen = now >= openHours && now <= closeHours
+    if (!isOpen) {
+        println("Office is closed")
+    } else {
+        println("Office is open")
+    }
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
