@@ -82,6 +82,22 @@ fun main() {
     } else {
         println("Office is open")
     }
+
+    println("")
+
+    // Numbers
+    val maxInt = Int.MAX_VALUE
+    val minInt = Int.MIN_VALUE
+    println("MaxInt $maxInt MinInt $minInt")
+    // Number Operation
+    println(5+5*4)
+    // Number Data Type Conversion
+    val stringNumber = "23"
+    val intNumber = 3
+    println(intNumber + stringNumber.toInt())
+    // Readable Number
+    val readableNumber = 1_000_000
+    println("Readable Number $readableNumber")
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
