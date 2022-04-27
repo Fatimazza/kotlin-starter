@@ -73,15 +73,8 @@ fun main() {
     println (user)
     printUser("Fatima")
 
-    println("")
-
     // Boolean
-    val isOpen = now >= openHours && now <= closeHours
-    if (!isOpen) {
-        println("Office is closed")
-    } else {
-        println("Office is open")
-    }
+    practiceBoolean(now, openHours, closeHours)
 
     // Numbers
     practiceNumbers()
@@ -94,6 +87,18 @@ fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
 
 fun printUser(name: String) {
     println("Your name $name")
+}
+
+fun practiceBoolean(now: Int, openHours: Int, closeHours: Int){
+    println("")
+    // Boolean Disjunction OR
+    val isOpen = now >= openHours && now <= closeHours
+    // Boolean Negation NOT
+    if (!isOpen) {
+        println("Office is closed")
+    } else {
+        println("Office is open")
+    }
 }
 
 fun practiceNumbers(){
