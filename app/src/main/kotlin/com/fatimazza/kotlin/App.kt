@@ -98,10 +98,26 @@ fun main() {
     // Readable Number
     val readableNumber = 1_000_000
     println("Readable Number $readableNumber")
+
+    //Array
+    practiceArray()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
 
 fun printUser(name: String) {
     println("Your name $name")
+}
+
+fun practiceArray() {
+    println("")
+    // Mix Array, one or more data type
+    val mixArray = arrayOf(1, 2, 3, "Oke", true)
+    println(mixArray[3])
+    // Int Array
+    val intArray = intArrayOf(3, 5, 9)
+    println(intArray[1])
+    // Array with size and lambda
+    val anotherIntArray = Array(4, {i -> i * i}) // 0, 1, 4, 9
+    println(anotherIntArray[3])
 }
