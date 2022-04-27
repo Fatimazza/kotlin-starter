@@ -135,15 +135,28 @@ fun practiceArray() {
 }
 
 fun practiceNullableTypes() {
-    println("\nNullable Types Not Printed\n")
+    println("\nNullable Types Not Printed")
 
     // Nullable Types
     // val text: String = null // compile time error
     val text: String? = null
 
-    // Accessing Nullable Type
+    // Accessing Nullable Object
     // val length = text.length // compile time error
     if (text != null) {
         val length = text.length
     }
+
+    // Handling Nullable Object
+
+    // Safe Calls Operator ?.
+    text?.length
+    // Elvis Operator ?:
+    val textLength = text?.length ?: 7
+    println("print length or default number (7): $textLength")
+    // Non-Null Assertion !!
+    // not recommended to use
+    // force nullable object to be non-null
+    // val textLengthNull = text!!.length
+    // println(textLengthNull) // compile not error but failed to run
 }
