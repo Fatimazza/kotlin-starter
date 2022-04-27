@@ -81,6 +81,9 @@ fun main() {
 
     // Array
     practiceArray()
+
+    // Nullable Types
+    practiceNullableTypes()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -129,4 +132,18 @@ fun practiceArray() {
     // Array with size and lambda
     val anotherIntArray = Array(4, {i -> i * i}) // 0, 1, 4, 9
     println(anotherIntArray[3])
+}
+
+fun practiceNullableTypes() {
+    println("\nNullable Types Not Printed\n")
+
+    // Nullable Types
+    // val text: String = null // compile time error
+    val text: String? = null
+
+    // Accessing Nullable Type
+    // val length = text.length // compile time error
+    if (text != null) {
+        val length = text.length
+    }
 }
