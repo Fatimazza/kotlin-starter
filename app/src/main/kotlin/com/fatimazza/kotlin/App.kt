@@ -83,8 +83,21 @@ fun main() {
         println("Office is open")
     }
 
-    println("")
+    // Numbers
+    practiceNumbers()
 
+    // Array
+    practiceArray()
+}
+
+fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
+
+fun printUser(name: String) {
+    println("Your name $name")
+}
+
+fun practiceNumbers(){
+    println("")
     // Numbers
     val maxInt = Int.MAX_VALUE
     val minInt = Int.MIN_VALUE
@@ -98,15 +111,6 @@ fun main() {
     // Readable Number
     val readableNumber = 1_000_000
     println("Readable Number $readableNumber")
-
-    //Array
-    practiceArray()
-}
-
-fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
-
-fun printUser(name: String) {
-    println("Your name $name")
 }
 
 fun practiceArray() {
