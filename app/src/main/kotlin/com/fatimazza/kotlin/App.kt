@@ -84,6 +84,9 @@ fun main() {
 
     // Nullable Types
     practiceNullableTypes()
+
+    // String Template
+    practiceStringTemplate()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -159,4 +162,18 @@ fun practiceNullableTypes() {
     // force nullable object to be non-null
     // val textLengthNull = text!!.length
     // println(textLengthNull) // compile not error, but runtime error
+}
+
+fun practiceStringTemplate() {
+    println("")
+    val name = "Fatima"
+    val age = 17
+    val weight = 51.2
+    // Concatenation, not using String Template
+    println("My Name " +name)
+    // String Template
+    println("My Name $name age $age weight $weight")
+    // Expression inside String Template
+    val hour = 7
+    println("Office ${if (hour > 7) "already close" else "is open"}")
 }
