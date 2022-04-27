@@ -158,5 +158,5 @@ fun practiceNullableTypes() {
     // not recommended to use
     // force nullable object to be non-null
     // val textLengthNull = text!!.length
-    // println(textLengthNull) // compile not error but failed to run
+    // println(textLengthNull) // compile not error, but runtime error
 }
