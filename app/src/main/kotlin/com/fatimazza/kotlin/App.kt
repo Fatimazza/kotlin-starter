@@ -11,6 +11,9 @@ class App {
 }
 
 fun main() {
+
+    // 1 Kotlin Fundamental
+
     // String
     val name = "Codewithza "
     val lastname: String = "here"
@@ -87,6 +90,11 @@ fun main() {
 
     // String Template
     practiceStringTemplate()
+
+    // 2 Control Flow
+
+    // Enumeration
+    practiceEnum()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -176,4 +184,88 @@ fun practiceStringTemplate() {
     // Expression inside String Template
     val hour = 7
     println("Office ${if (hour > 7) "already close" else "is open"}")
+}
+
+fun practiceEnum() {
+    println("")
+
+    // Accessing Object from Enum Class
+    val color: Color = Color.RED
+    println(color)
+
+    val colorGreen = ColorInt.GREEN
+    println(colorGreen)
+
+    val colorBlue = ColorIntAgain.BLUE
+    colorBlue.printValue()
+
+    // Get list of Object in Enum Class
+    // using values()
+    val colors: Array<Color> = Color.values()
+    colors.forEach {
+        color -> print(color)
+    }
+
+    println("")
+    // Get the name of Object in Enum Class
+    // using valueOf()
+    // beware of Illegal Argument Exception, when argument not match the Enum object, exp. typo to "RE"
+    val colorName: Color = Color.valueOf("RED")
+    println(colorName)
+
+    // Get list of Object and its name
+    // using enumValues() and enumValueOf()
+    val myColors: Array<ColorInt> = enumValues()
+    myColors.forEach {
+        color -> print(color)
+    }
+    val myColorName: ColorInt = enumValueOf("BLUE")
+    println("\nColor Name is $myColorName")
+
+    // Get position each Object in Enum Class
+    val colorRed: Color = Color.RED
+    println("Position of Color Red is ${colorRed.ordinal}")
+
+    // Check instances of Enum Class
+    // using When Expression
+    val theColor: Color = Color.BLUE
+    // beware warning ‘when' expression on enum is recommended to be exhaustive
+    // happened when all objects not listed
+    when(theColor) {
+        Color.RED -> println("The color is Red")
+        Color.GREEN -> println("The color is Green")
+        Color.BLUE -> println("The color is Blue")
+    }
+}
+
+// Enum Class contains Objects
+enum class Color {
+    RED, GREEN, BLUE
+}
+
+// Enum Class with parameter
+enum class ColorInt(val value:Int) {
+    RED(0xFF0000),
+    GREEN(0x00FF00),
+    BLUE(0x0000FF)
+}
+
+// Enum Class with Anonymous class for each Object
+enum class ColorIntAgain(val value: Int){
+    RED(0xFF0000){
+        override fun printValue() {
+            println("Value of Red is $value")
+        }
+    },
+    GREEN(0x00FF00) {
+        override fun printValue() {
+            println("Value of Green is $value")
+        }
+    },
+    BLUE(0x0000FF) {
+        override fun printValue() {
+            println("Value of Blue is $value")
+        }
+    };
+    abstract fun printValue()
 }
