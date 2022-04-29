@@ -354,4 +354,12 @@ fun practiceWhen() {
         }
     }
     println(otherStringOfValue)
+
+    // When is used to check Instance type of Object
+    val anyType: Any = 100L
+    when(anyType) {
+        is Long -> println("the value has a Long type")
+        is String -> println("the value has a String type")
+        else -> println("undefined")
+    }
 }
