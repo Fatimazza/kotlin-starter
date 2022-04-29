@@ -331,4 +331,27 @@ fun practiceWhen() {
         else -> "my value cannot be reached"
     }
     println(stringOfValue)
+
+    // When Expression with curly braces
+    val otherValue = 8
+    val otherStringOfValue = when (otherValue) {
+        6 -> {
+            println("Six")
+            "other value is 6"
+        }
+        7 -> {
+            println("Seven")
+            "other value is 7"
+        }
+        8 -> {
+            println("Eight")
+            "other value is 8"
+        }
+        // else is a MUST
+        else -> {
+            println("Undefined")
+            "other value cannot be reached"
+        }
+    }
+    println(otherStringOfValue)
 }
