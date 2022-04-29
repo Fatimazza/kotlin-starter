@@ -3,6 +3,8 @@
  */
 package com.fatimazza.kotlin
 
+import kotlin.random.Random
+
 class App {
     val greeting: String
         get() {
@@ -371,4 +373,15 @@ fun practiceWhen() {
         !in ranges -> println("value is outside the range")
         else -> println("value undefined")
     }
+
+    // Capture When subject using variable, Kotlin 1.3 up
+    val registerNumber = when(val regisNo = getRegisNumber()) {
+        in 1..50 -> 10 * regisNo
+        in 51 .. 100 -> 100 * regisNo
+        else -> regisNo
+    }
+    println(registerNumber)
 }
+
+fun getRegisNumber() = Random.nextInt(100)
+
