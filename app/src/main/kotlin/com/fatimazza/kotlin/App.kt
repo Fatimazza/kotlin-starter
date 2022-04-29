@@ -95,6 +95,9 @@ fun main() {
 
     // Enumeration
     practiceEnum()
+
+    // Expression and Statement
+    practiceExpressionStatement()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -268,4 +271,15 @@ enum class ColorIntAgain(val value: Int){
         }
     };
     abstract fun printValue()
+}
+
+fun practiceExpressionStatement() {
+    println("")
+
+    // IF as Statement
+    val openOffice = 7
+    val now = 8
+    if (now > openOffice)
+        println("Office is open")
+    else println("Office is close")
 }
