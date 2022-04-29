@@ -288,4 +288,19 @@ fun practiceExpressionStatement() {
     // the Return can be stored in a variable
     val office = if (now > openOffice) "Office already open" else "Office already closed"
     println(office)
+
+    // Statement
+    // Variable delaration is statement
+    val value1 = 10
+    val value2 = 4
+    // Expression
+    // Calling function is expression
+    sum(value1, value2)
+    // Expression inside expression
+    // Expression 1 calling sum(), Expression 2 is 1*4
+    sum(1, 1*4)
+}
+
+fun sum(value1: Int, value2: Int) {
+    value1 + value2
 }
