@@ -103,6 +103,9 @@ fun main() {
 
     // When Expression
     practiceWhen()
+
+    // When vs IF Expression
+    practiceWhenVsIf()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -384,4 +387,26 @@ fun practiceWhen() {
 }
 
 fun getRegisNumber() = Random.nextInt(100)
+
+fun practiceWhenVsIf() {
+    println("")
+
+    // IF Expression
+    // NO more than 2 conditions, simple condition
+    val anyType: Any = 100L
+    if (anyType is Long) {
+        println("the value has a Long type")
+    } else {
+        println("the value is not a Long type")
+    }
+
+    // When Expression
+    // More than 2 conditions
+    when (anyType) {
+        is Long -> println("the value has a Long type")
+        is Int -> println("the value has an Int type")
+        is Double -> println("the value has a Double type")
+        else -> println("Undefined")
+    }
+}
 
