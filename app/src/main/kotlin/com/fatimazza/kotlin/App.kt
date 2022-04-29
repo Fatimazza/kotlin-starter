@@ -320,4 +320,15 @@ fun practiceWhen() {
         // else is optional
         else -> println("value cannot be reached")
     }
+
+    // When Expression with Return
+    val myValue = 25
+    val stringOfValue = when (myValue) {
+        6 -> "my value is 6"
+        7 -> "my value is 7"
+        8 -> "my value is 8"
+        // else is a MUST
+        else -> "my value cannot be reached"
+    }
+    println(stringOfValue)
 }
