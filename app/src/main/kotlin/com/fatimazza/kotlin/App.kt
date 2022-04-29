@@ -282,4 +282,10 @@ fun practiceExpressionStatement() {
     if (now > openOffice)
         println("Office is open")
     else println("Office is close")
+
+    // IF as Expression
+    // A statement which has Return
+    // the Return can be stored in a variable
+    val office = if (now > openOffice) "Office already open" else "Office already closed"
+    println(office)
 }
