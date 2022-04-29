@@ -106,6 +106,9 @@ fun main() {
 
     // When vs IF Expression
     practiceWhenVsIf()
+
+    // While and Do While
+    practiceWhileDoWhile()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -407,6 +410,19 @@ fun practiceWhenVsIf() {
         is Int -> println("the value has an Int type")
         is Double -> println("the value has a Double type")
         else -> println("Undefined")
+    }
+}
+
+fun practiceWhileDoWhile() {
+    println("")
+
+    // While
+    // Entry Controlled Loop
+    // Condition evaluated first, then the loop runs
+    var counter = 1
+    while (counter <= 3) {
+        println("This is While")
+        counter ++ // code to stop the loop
     }
 }
 
