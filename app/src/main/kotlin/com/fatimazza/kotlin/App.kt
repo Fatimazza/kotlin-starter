@@ -98,6 +98,9 @@ fun main() {
 
     // Expression and Statement
     practiceExpressionStatement()
+
+    // When Expression
+    practiceWhen()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -303,4 +306,18 @@ fun practiceExpressionStatement() {
 
 fun sum(value1: Int, value2: Int) {
     value1 + value2
+}
+
+fun practiceWhen() {
+    println("")
+
+    // When Expression
+    val value = 7 //other than 6,7,8 print else
+    when(value){
+        6 -> println("value is 6")
+        7 -> println("value is 7")
+        8 -> println("value is 8")
+        // else is optional
+        else -> println("value cannot be reached")
+    }
 }
