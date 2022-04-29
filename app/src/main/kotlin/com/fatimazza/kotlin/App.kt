@@ -362,4 +362,13 @@ fun practiceWhen() {
         is String -> println("the value has a String type")
         else -> println("undefined")
     }
+
+    // When is used to check a value in a Range and Collection
+    val theValue = 27
+    val ranges = 10..50
+    when (theValue) {
+        in ranges -> println("value is in the range")
+        !in ranges -> println("value is outside the range")
+        else -> println("value undefined")
+    }
 }
