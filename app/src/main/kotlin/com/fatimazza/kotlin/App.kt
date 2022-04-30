@@ -469,5 +469,18 @@ fun practiceRange() {
         print("$it ")
     }
     println()
+
+    // Check value in Range
+    // if (1 <= 3 && 3 <= 5){ println("3 is in Range") }
+    val fiveToOne = 5.downTo(1)
+    if (3 in fiveToOne) {
+        println("3 is in Range")
+    }
+
+    // Check value not in Range
+    val fiveToTen = 5.rangeTo(10)
+    if (3 !in fiveToTen) {
+        println("3 is NOT in Range")
+    }
 }
 
