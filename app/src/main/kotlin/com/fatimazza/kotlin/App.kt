@@ -109,6 +109,9 @@ fun main() {
 
     // While and Do While
     practiceWhileDoWhile()
+
+    // Range
+    practiceRange()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -433,5 +436,16 @@ fun practiceWhileDoWhile() {
         println("This is Do While")
         counter++ // stop the loop, prevent infinite loop
     } while (counter<=2)
+}
+
+fun practiceRange() {
+    println("")
+
+    // Range
+    // Created using .. operator
+    val rangeInt = 1..10
+    // Step define gap between 2 values
+    // Default step is 1
+    println(rangeInt.step)
 }
 
