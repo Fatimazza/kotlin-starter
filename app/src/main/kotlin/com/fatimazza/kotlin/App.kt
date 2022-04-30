@@ -418,11 +418,20 @@ fun practiceWhileDoWhile() {
 
     // While
     // Entry Controlled Loop
-    // Condition evaluated first, then the loop runs
+    // Condition evaluated first, then the loop executed
     var counter = 1
     while (counter <= 3) {
         println("This is While")
         counter ++ // code to stop the loop
     }
+
+    // Do While
+    // Exit Controlled Loop
+    // Loop executed first, then condition is evaluated
+    counter = 1
+    do {
+        println("This is Do While")
+        counter++ // stop the loop, prevent infinite loop
+    } while (counter<=2)
 }
 
