@@ -455,5 +455,19 @@ fun practiceRange() {
         print("$it ")
     }
     println(rangeIntStep.step)
+
+    // Create Range using rangeTo // ascending
+    val rangeUp = 1.rangeTo(3)
+    rangeUp.forEach {
+        print("$it ")
+    }
+    println(rangeUp.step)
+
+    // Reverse Range to descending order
+    val rangeDown = 9.downTo(1).step(3)
+    rangeDown.forEach {
+        print("$it ")
+    }
+    println(rangeDown.step)
 }
 
