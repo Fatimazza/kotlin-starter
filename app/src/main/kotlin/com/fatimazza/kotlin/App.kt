@@ -482,5 +482,10 @@ fun practiceRange() {
     if (3 !in fiveToTen) {
         println("3 is NOT in Range")
     }
+
+    // Char Range
+    // Also available Int Range, Long Range
+    val charRange = 'A'.rangeTo('F')
+    charRange.forEach { print("$it ") }
 }
 
