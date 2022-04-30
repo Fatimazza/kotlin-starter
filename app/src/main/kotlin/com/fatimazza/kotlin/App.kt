@@ -447,5 +447,13 @@ fun practiceRange() {
     // Step define gap between 2 values
     // Default step is 1
     println(rangeInt.step)
+
+    // Change Range Step
+    val rangeIntStep = 1..10 step 2
+    // Print All Range Values
+    rangeIntStep.forEach {
+        print("$it ")
+    }
+    println(rangeIntStep.step)
 }
 
