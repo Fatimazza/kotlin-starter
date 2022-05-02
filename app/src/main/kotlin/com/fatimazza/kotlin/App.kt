@@ -112,6 +112,9 @@ fun main() {
 
     // Range
     practiceRange()
+
+    // For
+    practiceFor()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -419,6 +422,8 @@ fun practiceWhenVsIf() {
 fun practiceWhileDoWhile() {
     println("")
 
+    // While and Do While cannot be used in Range
+
     // While
     // Entry Controlled Loop
     // Condition evaluated first, then the loop executed
@@ -487,5 +492,16 @@ fun practiceRange() {
     // Also available Int Range, Long Range
     val charRange = 'A'.rangeTo('F')
     charRange.forEach { print("$it ") }
+}
+
+fun practiceFor() {
+    println()
+
+    // For
+    // Can be used Ranges, Collection, and Arrays
+    val ranges = 1..3
+    for (i in ranges) {
+        println("value is $i")
+    }
 }
 
