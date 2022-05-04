@@ -523,5 +523,12 @@ fun practiceFor() {
     for ((index, value) in rangeWithIndex.withIndex()) {
         println("value $value with index $index")
     }
+
+    // Access index of each element of Ranges
+    // Using For Each Indexed
+    val rangeWithIndex2 = 5.rangeTo(10) step 2
+    rangeWithIndex2.forEachIndexed { index, value ->
+        println("the value $value with index $index")
+    }
 }
 
