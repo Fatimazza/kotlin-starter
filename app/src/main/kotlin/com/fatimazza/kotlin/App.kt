@@ -497,7 +497,7 @@ fun practiceRange() {
 fun practiceFor() {
     println()
 
-    // For
+    // For Loop
     // Can be used Ranges, Collection, and Arrays
     val ranges = 1..3
     for (i in ranges) {
@@ -508,6 +508,13 @@ fun practiceFor() {
     val myRange = 6.rangeTo(10) step 2
     for (i in myRange) {
         println("My Range value is $i")
+    }
+
+    // For Each, lambda expression to perform Loop
+    // Alternative of For
+    val myRange2 = 6.rangeTo(10) step 2
+    for (i in myRange2) {
+        println("My Range 2 value is $i")
     }
 }
 
