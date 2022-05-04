@@ -530,5 +530,11 @@ fun practiceFor() {
     rangeWithIndex2.forEachIndexed { index, value ->
         println("the value $value with index $index")
     }
+
+    // For Each Indexed
+    // A Lambda Expression which Argument is NOT USED, change to _
+    rangeWithIndex2.forEachIndexed { index, _ ->
+        println("the index $index")
+    }
 }
 
