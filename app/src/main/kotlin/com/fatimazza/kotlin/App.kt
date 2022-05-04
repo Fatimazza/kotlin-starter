@@ -503,5 +503,11 @@ fun practiceFor() {
     for (i in ranges) {
         println("value is $i")
     }
+
+    // For used in Ranges using RangeTo and Step
+    val myRange = 6.rangeTo(10) step 2
+    for (i in myRange) {
+        println("My Range value is $i")
+    }
 }
 
