@@ -115,6 +115,9 @@ fun main() {
 
     // For
     practiceFor()
+
+    // Break and Continue
+    practiceBreakContinue()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -535,6 +538,26 @@ fun practiceFor() {
     // A Lambda Expression which Argument is NOT USED, change to _
     rangeWithIndex2.forEachIndexed { index, _ ->
         println("the index $index")
+    }
+}
+
+fun practiceBreakContinue() {
+    println()
+    val listOfInt = listOf(1, 2, 3, null, 5, null, 7)
+
+    // Break
+    // to stop execution of loop in certain condition
+    for (i in listOfInt) {
+        if (i == null) break
+        print(i)
+    }
+
+    // Continue
+    // to continue with the next loop iteration
+    println()
+    for (i in listOfInt) {
+        if (i == null) continue
+        print(i)
     }
 }
 
