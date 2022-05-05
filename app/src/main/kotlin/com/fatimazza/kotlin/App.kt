@@ -559,5 +559,30 @@ fun practiceBreakContinue() {
         if (i == null) continue
         print(i)
     }
+
+    // Break and Continue with label
+    // to terminate and skip the iteration to the desired labeled loop
+    // each expression has a label with identifier, exp @foo and @bar
+
+    // Break with label
+    println()
+    outerLoop@ for (i in 1..5) {
+        println("Outside Loop - $i")
+
+        innerLoop@ for (j in 1..5) {
+            print("Inside Loop - $j || ")
+            if ( j > 2) break@outerLoop
+        }
+    }
+
+    // Continue with label
+    outerLoop@ for (i in 1..3) {
+        println("\nOut Loop - $i")
+
+        innerLoop@ for (j in 1..3) {
+            print("Ins Loop - $j || ")
+            if ( j > 1) continue@outerLoop
+        }
+    }
 }
 
