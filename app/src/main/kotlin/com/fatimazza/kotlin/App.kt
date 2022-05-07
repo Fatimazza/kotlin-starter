@@ -632,6 +632,13 @@ fun practiceDataClass() {
     val userMe3 = UserMe("magista", 16)
     println("userMe equals userMe2 = ${userMe.equals(userMe2)}")
     println("userMe equals userMe3 = ${userMe.equals(userMe3)}")
+
+    // Copy and Modify Data Class
+    val dataUser4 = dataUser.copy()
+    val dataUser5 = dataUser.copy(age = 22)
+    println()
+    println(dataUser4)
+    println(dataUser5)
 }
 
 // Compare Regular Class to Data Class
