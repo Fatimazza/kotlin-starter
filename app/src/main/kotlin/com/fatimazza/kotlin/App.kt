@@ -608,8 +608,21 @@ fun practiceDataClass() {
     println(user)
     // Contain class name, all property & value inside the class
     println(dataUser)
+
+    val userMe = UserMe("fatima", 17)
+    println(userMe)
 }
 
+// Compare Regular Class to Data Class
 class User(val name: String, val age: Int)
 data class DataUser(val name: String, val age: Int)
+
+// Regular class with additional functions
+// which already available in data class
+class UserMe(val name: String, val age: Int) {
+    // Add toString() function to print information of UserMe object
+    override fun toString(): String {
+        return "UserMe(name=$name, age=$age)"
+    }
+}
 
