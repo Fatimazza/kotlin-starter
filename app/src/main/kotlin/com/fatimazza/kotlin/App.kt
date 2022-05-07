@@ -611,6 +611,21 @@ fun practiceDataClass() {
 
     val userMe = UserMe("fatima", 17)
     println(userMe)
+
+    // Object Equals Comparison
+    println()
+    val dataUser2 = DataUser("fatima", 17)
+    val dataUser3 = DataUser("magista", 16)
+    println("dataUser equals dataUser2 = ${dataUser.equals(dataUser2)}")
+    println("dataUser equals dataUser3 = ${dataUser.equals(dataUser3)}")
+
+    val user2 = User("fatima",17)
+    val user3 = User("magista", 16)
+    // Result always false, even though the data is same
+    // Cause regular class compares the memory reference (object location)
+    // instead of the content
+    println("user equals user2 = ${user.equals(user2)}")
+    println("user equals user3 = ${user.equals(user3)}")
 }
 
 // Compare Regular Class to Data Class
