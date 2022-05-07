@@ -118,6 +118,11 @@ fun main() {
 
     // Break and Continue
     practiceBreakContinue()
+
+    // 3 Data Class & Collection
+
+    // Data Class
+    practiceDataClass()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -585,4 +590,26 @@ fun practiceBreakContinue() {
         }
     }
 }
+
+// Data Class & Collection
+
+fun practiceDataClass() {
+    println("\n")
+    // Data Class
+    // A class that provide functionality to manage data
+
+    // Create object from Regular Class and Data Class
+    val user = User("fatima", 17)
+    val dataUser = DataUser("fatima", 17)
+
+    // Compare Regular Class to Data Class
+
+    // Contain package name, class name, & class' memory address
+    println(user)
+    // Contain class name, all property & value inside the class
+    println(dataUser)
+}
+
+class User(val name: String, val age: Int)
+data class DataUser(val name: String, val age: Int)
 
