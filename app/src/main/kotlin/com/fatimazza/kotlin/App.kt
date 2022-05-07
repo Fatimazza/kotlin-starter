@@ -626,6 +626,12 @@ fun practiceDataClass() {
     // instead of the content
     println("user equals user2 = ${user.equals(user2)}")
     println("user equals user3 = ${user.equals(user3)}")
+
+    // Object Equal Comparison - after manually added
+    val userMe2 = UserMe("fatima", 17)
+    val userMe3 = UserMe("magista", 16)
+    println("userMe equals userMe2 = ${userMe.equals(userMe2)}")
+    println("userMe equals userMe3 = ${userMe.equals(userMe3)}")
 }
 
 // Compare Regular Class to Data Class
@@ -635,9 +641,30 @@ data class DataUser(val name: String, val age: Int)
 // Regular class with additional functions
 // which already available in data class
 class UserMe(val name: String, val age: Int) {
+
     // Add toString() function to print information of UserMe object
     override fun toString(): String {
         return "UserMe(name=$name, age=$age)"
+    }
+
+    // Add equals() function to compare object data
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as UserMe
+
+        if (name != other.name) return false
+        if (age != other.age) return false
+
+        return true
+    }
+
+    // Add hashcode() function
+    override fun hashCode(): Int {
+        var result = name.hashCode()
+        result = 31 * result + age
+        return result
     }
 }
 
