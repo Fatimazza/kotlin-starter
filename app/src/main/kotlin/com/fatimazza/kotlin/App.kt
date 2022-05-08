@@ -639,6 +639,20 @@ fun practiceDataClass() {
     println()
     println(dataUser4)
     println(dataUser5)
+
+    // Destructuring Declarations
+    // Parse object properties into variables
+    val myDataUser = DataUser("fitimizzi", 7)
+    val name = myDataUser.component1()
+    val age = myDataUser.component2()
+    println()
+    println("My name is $name, I am $age years old")
+    // Make several Variables from an Object directly
+    val (myName, myAge) = myDataUser
+    println("My name is .. $myName, I am .. $myAge years old")
+    // Add Behaviour in Data Class, in the form of a Function (1)
+    val dataUserMe = DataUserMe("fitimizzi", 3)
+    dataUserMe.intro()
 }
 
 // Compare Regular Class to Data Class
@@ -675,3 +689,9 @@ class UserMe(val name: String, val age: Int) {
     }
 }
 
+// Add behaviour in Data Class, in the form of a function (2)
+data class DataUserMe(val name: String, val age: Int) {
+    fun intro(){
+        println("My name is >> $name, I am >> $age years old")
+    }
+}
