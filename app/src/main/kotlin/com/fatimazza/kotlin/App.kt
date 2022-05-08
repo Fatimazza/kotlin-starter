@@ -136,6 +136,9 @@ fun main() {
 
     // Set
     practiceSet()
+
+    // Map
+    practiceMap()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -792,5 +795,42 @@ fun practiceSet() {
     // Delete item with certain value
     mutableSet.remove(1)
     println(mutableSet)
+}
+
+// Collections - Map
+fun practiceMap() {
+    println()
+
+    // Map
+    // Collection store data with format key-value pairs
+    // Format: Key to Value
+    // Immutable, data can't be changed or modified
+
+    val capital = mapOf(
+        "Jakarta" to "Indonesia",
+        "London" to "England",
+        "New Delhi" to "India"
+    )
+    println("value of key Jakarta is .. " +capital["Jakarta"])
+    println("value of key Jakarta is ... " +capital.getValue("Jakarta"))
+    println(capital["Norway"]) // will be null
+    // println(capital.getValue("Norway")) // No Such Element Exception
+
+    // Show all Keys in a Map
+    // mapKey returns a Set, cause Key should be unique
+    val mapKey = capital.keys
+    println(mapKey)
+    // Show all Value in a Map
+    // mapValues returns a Collection as data type
+    val mapValues = capital.values
+    println(mapValues)
+
+    // Modify a Map
+    // Convert Immutable Map to Mutable using toMutableMap()
+    // Adding key-value pairs
+    val mutableCapital = capital.toMutableMap()
+    mutableCapital.put("Oslo", "Norway")
+    mutableCapital.put("Berlin", "Germany")
+    mutableCapital.forEach { key, value -> println("key $key value $value")  }
 }
 
