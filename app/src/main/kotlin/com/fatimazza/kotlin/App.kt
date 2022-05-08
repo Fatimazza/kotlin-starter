@@ -133,6 +133,9 @@ fun main() {
 
     // List
     practiceList()
+
+    // Set
+    practiceSet()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -707,7 +710,6 @@ data class DataUserMe(val name: String, val age: Int) {
 }
 
 // Collections - List
-
 fun practiceList() {
     println()
     // List
@@ -746,5 +748,49 @@ fun practiceList() {
     myAnyList.removeAt(0)
     println()
     myAnyList.forEach{ print("$it ") }
+}
+
+// Collections - Set
+fun practiceSet() {
+    println("\n")
+
+    // Set
+    // Collection store unique value, no duplicate data
+    // Immutable, data can't be changed or modified
+    val integerSet = setOf(1, 2, 4, 2, 1, 5)
+    // Set only print unique value
+    integerSet.forEach { print("$it ") }
+
+    // Order in Set is not important
+    // different order considered the same
+    val setA = setOf(1, 2, 4, 2, 1, 5)
+    val setB = setOf(1, 2, 4, 5)
+    println()
+    println(setA == setB) // will be true
+
+    // Check a value inside of a Set
+    println(9 in setA)
+    println(2 in setB)
+
+    // Union (gabungan) of two Set
+    val setC = setOf(1, 3, 5, 6, 9)
+    val union = setA.union(setC)
+    println(union)
+    // Intersect (irisan) of two Set
+    val intersect = setB.intersect(setC)
+    println(intersect)
+
+    // Modify value inside a Set
+    // Convert default Immutable Set to Mutable, using mutableSetOf()
+    // Only adding and deleting, CANNOT change value
+    val mutableSet = mutableSetOf(1, 2, 4, 2, 1, 5)
+    println(mutableSet)
+    // Cannot change value
+    // mutableSet[2] = 6
+    // Add item in the end of a Set
+    mutableSet.add(6)
+    // Delete item with certain value
+    mutableSet.remove(1)
+    println(mutableSet)
 }
 
