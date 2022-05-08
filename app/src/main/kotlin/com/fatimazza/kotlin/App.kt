@@ -129,7 +129,13 @@ fun main() {
     // other object .. including Data Class
 
     // Object inheritance of Collections are
-    // List, Set Map
+    // List, Set, Map
+
+    // Collection is Immutable by default
+    // Always use immutable collection interfaces ( Collection , List , Set , Map )
+    // to declare collections which are not mutated
+    // Mutable Collections is not recommended
+    // due to the unpredictable result when the collection modified by > 1 process
 
     // List
     practiceList()
