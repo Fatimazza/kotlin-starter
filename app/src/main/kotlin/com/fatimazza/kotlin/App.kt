@@ -721,6 +721,7 @@ fun practiceList() {
 
     // Different data type
     val anyList = listOf('a', "Kotlin", 3, true)
+    // including Data Class, in this case User()
     val anyListAgain = listOf('a', "Kotlin", 3, true, User("za", 18))
 
     // Accessing data in List
