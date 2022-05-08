@@ -123,6 +123,16 @@ fun main() {
 
     // Data Class
     practiceDataClass()
+
+    // Collections
+    // An object that can store a collection of other objects
+    // other object .. including Data Class
+
+    // Object inheritance of Collections are
+    // List, Set Map
+
+    // List
+    practiceList()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -695,3 +705,45 @@ data class DataUserMe(val name: String, val age: Int) {
         println("My name is >> $name, I am >> $age years old")
     }
 }
+
+// Collections - List
+
+fun practiceList() {
+    println()
+    // List
+    // Collection store same & different data type
+    // Immutable, data can't be changed or modified
+
+    // Same data type
+    val numberList : List<Int> = listOf(1, 2, 3, 4, 5)
+    val numberListAgain = listOf(1, 2, 3, 4, 5)
+    val charList = listOf('a', 'b', 'c')
+
+    // Different data type
+    val anyList = listOf('a', "Kotlin", 3, true)
+    val anyListAgain = listOf('a', "Kotlin", 3, true, User("za", 18))
+
+    // Accessing data in List
+    numberList.forEach { print("$it ") }
+    println()
+    anyListAgain.forEach { print("$it ") }
+    println()
+    println(anyList[3]) // index start from 0
+    // println(anyList[5]) // Array Index Out Of Bounds
+
+    // Modify value inside a List
+    // Convert default Immutable List to Mutable, using mutableListOf()
+    val myAnyList = mutableListOf('a', "Kotlin", 3, true)
+    myAnyList.forEach{ print("$it ") }
+    // Add item at the end of a List
+    myAnyList.add('i')
+    // Add item in certain index
+    myAnyList.add(1, "love")
+    // Change item value
+    myAnyList[3] = 5
+    // Delete item based on Array index
+    myAnyList.removeAt(0)
+    println()
+    myAnyList.forEach{ print("$it ") }
+}
+
