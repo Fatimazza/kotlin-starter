@@ -866,6 +866,12 @@ fun practiceCollectionOperation() {
     println()
     val oddList = numberList.filterNot { it % 2 == 0 }
     oddList.forEach { print("$it ") }
+
+    // Map
+    // Create new collection from the result of a function
+    println()
+    val multipliedBy3 = numberList.map { it * 5 }
+    multipliedBy3.forEach { print("$it ") }
 }
 
 // Collections - Sequences
