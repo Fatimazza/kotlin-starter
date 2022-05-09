@@ -872,6 +872,12 @@ fun practiceCollectionOperation() {
     println()
     val multipliedBy3 = numberList.map { it * 5 }
     multipliedBy3.forEach { print("$it ") }
+
+    // Count
+    // Count all items inside a Collection
+    println()
+    val myNumberList = listOf(1, 3, 5, 7)
+    println(myNumberList.count())
 }
 
 // Collections - Sequences
