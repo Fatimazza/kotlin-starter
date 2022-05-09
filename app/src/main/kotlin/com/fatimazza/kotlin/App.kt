@@ -153,6 +153,9 @@ fun main() {
     // Map
     practiceMap()
 
+    // Collection Operation
+    practiceCollectionOperation()
+
     // Sequence
     practiceSequence()
 }
@@ -850,9 +853,24 @@ fun practiceMap() {
     mutableCapital.forEach { key, value -> println("key $key value $value")  }
 }
 
+// Collection Operation
+fun practiceCollectionOperation() {
+    println()
+
+    // Filter and Filter Not
+    val numberList = listOf(1, 2, 3, 4, 5, 6, 7)
+    // Filter even number, divisible by 2
+    val evenList = numberList.filter { it % 2 == 0 }
+    evenList.forEach { print("$it ") }
+    // Filter odd number
+    println()
+    val oddList = numberList.filterNot { it % 2 == 0 }
+    oddList.forEach { print("$it ") }
+}
+
 // Collections - Sequences
 fun practiceSequence() {
-    println()
+    println("\n")
     // Sequence
     // Collection which execute Lazy Evaluation
 
