@@ -878,6 +878,8 @@ fun practiceCollectionOperation() {
     println()
     val myNumberList = listOf(1, 3, 5, 7)
     println(myNumberList.count())
+    // Count with a Lambda Expression as a condition
+    println(myNumberList.count { it % 5 == 0})
 }
 
 // Collections - Sequences
