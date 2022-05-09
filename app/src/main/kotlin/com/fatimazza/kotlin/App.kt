@@ -126,16 +126,23 @@ fun main() {
 
     // Collections
     // An object that can store a collection of other objects
-    // other object .. including Data Class
+    // other object ... including Data Class
 
     // Object inheritance of Collections are
-    // List, Set, Map
+    // List, Set, Map, Sequences
 
     // Collection is Immutable by default
-    // Always use immutable collection interfaces ( Collection , List , Set , Map )
-    // to declare collections which are not mutated
+    // Always use immutable collection interfaces ( List , Set , Map )
+    // to declare Collections which are not mutated
     // Mutable Collections is not recommended
     // due to the unpredictable result when the collection modified by > 1 process
+
+    // List, Set, Map execute Eager Evaluation / Horizontal Evaluation
+    // evaluate all item in a collection
+    // this affect to performance
+
+    // Sequences execute Lazy Evaluation / Vertical Evaluation
+    // evaluate item needed only
 
     // List
     practiceList()
@@ -145,6 +152,9 @@ fun main() {
 
     // Map
     practiceMap()
+
+    // Sequence
+    practiceSequence()
 }
 
 fun setUser(name: String, age: Int) = "Hei $name, you are $age years old"
@@ -838,5 +848,29 @@ fun practiceMap() {
     mutableCapital.put("Oslo", "Norway")
     mutableCapital.put("Berlin", "Germany")
     mutableCapital.forEach { key, value -> println("key $key value $value")  }
+}
+
+// Collections - Sequences
+fun practiceSequence() {
+    println()
+    // Sequence
+    // Collection which execute Lazy Evaluation
+
+    // Difference between List and Sequence
+    // List
+    val list = (1..100).toList()
+    list.filter { it % 5 == 0 }.map { it * 2 }.forEach { print("$it ") }
+    // all items > filtering all > mapping all > print
+    // Sequence, convert using asSequence()
+    println()
+    list.asSequence().filter { it % 5 == 0 }.map { it * 2 }.forEach { print("$it ") }
+    // all items > filtering > only filtered item > mapping > print
+
+    println()
+    // Create Sequence Object (unlimited) using generateSequence()
+    // 2 parameters: first item in Sequence, lambda expression of item changes
+    val sequenceNumber = generateSequence(1) { it + 3}
+    // using take() to prevent infinite loop
+    sequenceNumber.take(7).forEach { print("$it ") }
 }
 
