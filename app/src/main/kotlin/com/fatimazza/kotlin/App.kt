@@ -876,10 +876,23 @@ fun practiceCollectionOperation() {
     // Count
     // Count all items inside a Collection
     println()
-    val myNumberList = listOf(1, 3, 5, 7)
+    val myNumberList = listOf(1, 3, 5, 7, 8, 10)
     println(myNumberList.count())
     // Count with a Lambda Expression as a condition
     println(myNumberList.count { it % 5 == 0})
+
+    // Find and FirstOrNull
+    // Find first item based on condition
+    // When data not found, it returns null
+    val numList = listOf(1, 2, 3, 4, 5, 6, 7)
+    val firstOddNumber = numList.find { it % 2 == 1 }
+    println("first odd number $firstOddNumber")
+    val firstOrNullNumber = numList.firstOrNull { it % 8 == 0 }
+    println("first or null number $firstOrNullNumber")
+    // LastOrNull
+    // Find last item based on condition
+    val lastNumber = numList.lastOrNull()
+    println("last number $lastNumber")
 }
 
 // Collections - Sequences
