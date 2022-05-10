@@ -904,6 +904,12 @@ fun practiceCollectionOperation() {
     // If the condition not fulfilled, the result is Null
     val moreThan10 = numList.find { it > 10 }
     println(moreThan10) // Null
+
+    // Sum
+    // Sum up each data in Collection with Number type data
+    val theNumberList = listOf(1, 3, 4, 6, 8)
+    val totalNumber = theNumberList.sum()
+    println("totalNumber $totalNumber")
 }
 
 // Collections - Sequences
