@@ -910,6 +910,16 @@ fun practiceCollectionOperation() {
     val theNumberList = listOf(1, 3, 4, 6, 8)
     val totalNumber = theNumberList.sum()
     println("totalNumber $totalNumber")
+
+    // Sorted
+    // Sort all items in a Collections
+    // Ascending Sort by default
+    val kotlinChar = listOf('k', 'o', 't', 'l', 'i', 'n')
+    val ascendingSort = kotlinChar.sorted()
+    println(ascendingSort)
+    // Descending Sort
+    val descendingSort = kotlinChar.sortedDescending()
+    println(descendingSort)
 }
 
 // Collections - Sequences
