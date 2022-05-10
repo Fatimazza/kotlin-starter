@@ -893,11 +893,22 @@ fun practiceCollectionOperation() {
     // Find last item based on condition
     val lastNumber = numList.lastOrNull()
     println("last number $lastNumber")
+
+    // First and Last
+    // Filter first and last item of collection
+    // Can be used with Lambda Expression as the condition
+    val moreThan5 = numList.first{ it > 5}
+    println(moreThan5)
+    val lastLessThan5 = numList.last { it < 5 }
+    println(lastLessThan5)
+    // If the condition not fulfilled, the result is Null
+    val moreThan10 = numList.find { it > 10 }
+    println(moreThan10) // Null
 }
 
 // Collections - Sequences
 fun practiceSequence() {
-    println("\n")
+    println()
     // Sequence
     // Collection which execute Lazy Evaluation
 
